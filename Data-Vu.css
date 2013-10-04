@@ -1,0 +1,319 @@
+/*	CSS Document for the Data Vu widget.
+	Originally developed by Paulo Avila (http://www.apaulodesign.com/)
+	
+	sunday10/5: added styles for the alert dialog box
+	11/9 updated wr_dialog styles
+	11/16 stylized tooltip (regular and pro)
+	12/2 top/middle/bottom for the front
+	12/11 top/middle/bottom for the front
+	1/31 results formatting
+	1/31 drag over outline (no hover image needed)*/
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hide;
+	background-color: transparent;
+}
+
+
+/* Front Styles
+--------------------------------------------------------- */
+#front {
+/*
+	position: absolute;
+	width: 302px;
+	height: 124px;
+background-color: yellow;
+*/
+}
+#top {
+	position: absolute;
+    width: 302px;
+	height: 98px;
+	background: url(Images/bg_front-top.png) no-repeat;
+}
+#middle {
+	position: absolute;
+    top: 98px;
+    right: 0;
+    left: 0;
+	bottom: 21px;
+	overflow: hidden;
+	background: url(Images/bg_front-middle.png) repeat-y;
+}
+#bottom {
+	position: absolute;
+	width: 302px;
+	height: 26px;
+	bottom: 0;
+	background: url(Images/bg_front-bottom.png) no-repeat;
+}
+#infoButton {
+	position: absolute;
+	bottom: 27px;
+	right: 25px;
+	cursor: default;
+	z-index: 1;
+}
+#syncButton {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 34px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	cursor: default;
+}
+#info {
+	position: absolute;
+	width: 100px;
+	height: 28px;
+	top: 86px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	background: url(Images/matrix_spinner.png) no-repeat top center;
+	color: #202427;
+	font: 7pt/10pt 'Lucida Grande';
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: default;
+	z-index: 1;
+}
+#srcPlatter {
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	top: 30px;
+	left: 16px;
+	z-index: 1;
+	border: 2px solid transparent;
+	-webkit-border-radius: 9px;
+}
+#srcFileName {
+	position: absolute;
+	width: 84px;
+	height: 28px;
+	top: 86px;
+	left: 16px;
+	z-index: 1;
+}
+#srcPlatterName, #tarPlatterName {
+	position: fixed;
+	width: 80px;
+	margin-top: -28px;
+	color: #333943;
+	font: bold 7.5pt 'Verdana';
+	text-align: center;
+	cursor: default;
+	z-index: -1;
+}
+#tarPlatter {
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	top: 30px;
+	right: 16px;
+	z-index: 1;
+	border: 2px solid transparent;
+	-webkit-border-radius: 9px;
+}
+#tarFileName {
+	position: absolute;
+	width: 84px;
+	height: 28px;
+	top: 86px;
+	right: 16px;
+	z-index: 1;
+}
+.fileName {
+	color: white;
+	font: 8pt 'Lucida Grande';
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.icon {
+	margin-top: -32px;
+	margin-left: -2px;
+}
+#results {
+	margin: 27px 18px 0 18px;
+	padding: 10px 4px 0 4px;
+	display: none;
+	border-top: solid 2px #131623;
+}
+#exit-text {
+	margin-bottom: 7px;
+	height: 16px;
+	color: white;
+	font: 10pt/12pt 'Lucida Grande';
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#exit-text:hover { text-decoration: underline; cursor: help; }
+#exit-icon {
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(Images/matrix_status.png) no-repeat;
+	cursor: default;
+}
+/* the order of the following 3 style definiations matters! */
+#exit-icon.mouseover { background-position-x: -40px; }
+#exit-icon:active { background-position-x: -80px; }
+#exit-icon.mouseout { background-position-x: 0; }
+#summary {
+	float: left;
+	margin-left: 10px;
+	width: 208px;
+	height: 40px;
+	color: #3a3f54;
+	font: 7pt/10pt 'Lucida Grande';
+	text-align: left;
+	overflow: hidden;
+}
+#resetButton {
+	float: right;
+	margin: -20px -1px 0 0;
+	color: white;
+	font: 8pt/11pt "Lucida Grande";
+	text-shadow: 0 -1px 0 #111;
+}
+.strike {
+	text-decoration: line-through;
+}
+
+
+
+/* Back Styles
+--------------------------------------------------------- */
+#back {
+	position: absolute;
+	width: 302px;
+	height: 128px;
+	display: none;
+	background: url(Images/bg_back.png) no-repeat bottom;
+}
+#logo {
+	position: absolute;
+	top: 32px;
+	right: 21px;
+	cursor: pointer;
+}
+#options {
+	position: absolute;
+	left: 18px;
+	bottom: 17px;
+//	margin: 55px 0 0 18px;
+	font: bold 7.5pt "Helvetica Neue";
+	color: white;
+	line-height: 11pt;
+	cursor: default;
+}
+#options input[type="checkbox"] {
+	margin: 0 4px 0 0;
+	width: 11px;
+}
+#options input[type="radio"] {
+	margin: 0 5px 0 -1px;
+	width: 11px;
+}
+#version {
+	position: absolute;
+	bottom: 47px;
+	right: 19px;
+	text-align: right;
+	font: normal normal normal 5pt/6pt Verdana;
+	color: gray;
+	cursor: pointer;
+}
+#doneButton {
+	position: absolute;
+	bottom: 17px;
+	right: 16px;
+	cursor: default;
+}
+
+
+/* Widget Resource Styles
+--------------------------------------------------------- */
+div#wr_dialog {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/*vertical-align: middle;*/
+	cursor: default;
+}
+div#wr_dialog div.title {
+	min-height: 15px;
+	margin: 0 auto;
+	padding: 33px 43px 0 47px;
+	background: url(Images/bg_dialog-top.png) no-repeat center top;
+	color: white;
+	font: bold 9pt/11pt "Helvetica Neue";
+	text-shadow: 0 -1px 0 #111;
+}
+div#wr_dialog div.message {
+	margin: 0 auto;
+	padding: 8px 43px 0 47px;
+	background: url(Images/bg_dialog-middle.png) repeat-y center top;
+	overflow: hidden;
+	color: white;
+	font: 8pt/11pt "Helvetica Neue";
+	text-shadow: 0 -1px 0 #111;
+}
+div#wr_dialog div.buttons {
+	min-height: 50px;
+	margin: 0 auto;
+	padding: 6px 41px 0 0;
+	background: url(Images/bg_dialog-bottom.png) no-repeat center bottom;
+}
+div#wr_dialog div.buttons span.button > div {
+	display: inline;
+	padding-left: 9px;
+	float: right;
+}
+
+div#wr_tooltip span {
+	position: absolute;
+	margin-right: 20px;
+	padding: 3px 2px 3px 5px;
+	color: transparent;
+	font: 8pt/9pt "Lucida Grande";
+	cursor: default;
+}
+div#wr_tooltip span.bg {
+	background-color: #faf5c2;
+	border: 1px solid #9c9b8d;
+	opacity: .9;
+	-webkit-box-shadow: 0 2px 7px #222;
+	-webkit-border-radius: 0;
+}
+div#wr_tooltip span.text {
+	color: black;
+}
+
+div#wr_tooltip.pro span {
+	position: absolute;
+	margin-right: 20px;
+	padding: 3px 7px;
+	color: transparent;
+	font: 7.5pt/9pt "Lucida Grande";
+	cursor: default;
+}
+div#wr_tooltip.pro span.bg {
+	background-color: #111;
+	border: 0;
+	opacity: .95;
+	-webkit-box-shadow: 0 0 6px #000;
+	-webkit-border-radius: 7px;
+}
+div#wr_tooltip.pro span.text {
+	color: white;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Data Vu</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<style type="text/css">@import "Data-Vu.css";</style>
+<script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="UTF-8"></script>
+<script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localizedStrings.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Scripts/wr_basic.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Scripts/wr_plist.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Scripts/wr_version.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Scripts/wr_fader.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Scripts/wr_strFormat.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Data-Vu.js" charset="UTF-8"></script>
+</head>
+
+<body onload="w_init()">
+
+<div id="front">
+	<div id="top">
+        <div id="srcPlatter">
+			<img src="Images/icon_src.png" id="srcFileIcon" class="icon">
+			<span id="srcPlatterName"></span>
+		</div>
+		<div id="srcFileName" class="fileName"></div>
+
+		<div id="syncButton"></div>
+		<div id="info"></div>
+
+		<div id="tarPlatter">
+			<img src="Images/icon_tar.png" id="tarFileIcon" class="icon">
+			<span id="tarPlatterName"></span>
+		</div>
+		<div id="tarFileName" class="fileName"></div>
+	</div>
+	<div id="middle">
+		<div id="results">
+			<div id="exit-text"></div>
+			<div id="exit-icon"></div>
+			<div id="summary"></div>
+			<div id="resetButton"></div>
+		</div>
+	</div>
+	<div id="bottom">
+		<div id="infoButton"></div>
+	</div>
+</div>
+
+<div id="back">
+	<img id="logo" src="Images/logo.png" />
+<!--
+	<select style="position:absolute;top:60px;left:20px;width:120px;font-size: 10px;">
+		<option value="mirror">MIRROR: Make the Target an exact replica of the Source</option>
+		<option value="smartCopy">SMART COPY: Only copy files that do not exist in the Target</option>
+		<option value="clone">BOOTABLE CLONE: Make a bootable copy of the Source</option>
+	</select>
+-->
+	<div id="options">
+		<label><input id="dryRun" type="checkbox" /></label><br />
+		<label><input id="mirrorSource" type="checkbox" checked="" /></label><br />
+		<label><input id="excludeFiles" type="checkbox" checked="" /></label><br />
+		<label><input id="autoUpdate" type="checkbox" checked="" disabled="" /></label>
+	</div>
+	<div id="version"></div>
+	<div id="doneButton"></div>
+</div>
+
+</body>
+</html>
