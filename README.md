@@ -17,13 +17,13 @@ To define the source and target directories, drop folders onto the widget:
 
 †The Default hot-key for Dashboard is either the `F4` or `F12` button (depending on your model of Mac). Different hot-keys/hot-corners can be defined your System Preferences.
 
-![The front of the Data Vu Widget](//demoive.github.io/Data-Vu/data-vu-front.png)
+![The front of the Data Vu Widget](http://demoive.github.io/Data-Vu/data-vu-front.png)
 
 
 ## Features
 
 - Extremely fast mirroring operation by updating only the differences between two sets of files using an efficient checksum-search algorithm
-- Preview mode allows you to see what “will be transfered”
+- Preview mode allows you to see what “will be transferred”
 - View a summary of the activity automatically or save a detailed log of everything that was copied for your records
 - Automatically check for updates
 
