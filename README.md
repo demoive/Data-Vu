@@ -17,6 +17,8 @@ To define the source and target directories, drop folders onto the widget:
 
 †The Default hot-key for Dashboard is either the `F4` or `F12` button (depending on your model of Mac). Different hot-keys/hot-corners can be defined your System Preferences.
 
+![The front of the Data Vu Widget](http://demoive.github.io/Data-Vu/data-vu-icon.png)
+
 
 ## Features
 
