@@ -7,7 +7,7 @@ This project is not actively maintained anymore. For that reason, I've made it o
 
 ## Summary
 
-The Data Vu widget is the simplest way to create a backup of your files. It allows you to quickly synchronize your data from any folder to any location: an external drive, a different partition, another folder on the same drive, even across the network to a remote server!
+The Data Vu widget provides an easy and simple way to create a backup of your files. It allows you to quickly synchronize your data from any folder to any location: an external drive, a different partition, another folder on the same drive, even across the network to a remote server!
 
 To define the source and target directories, drop folders onto the widget:
 
@@ -15,9 +15,9 @@ To define the source and target directories, drop folders onto the widget:
 2. While still dragging your folder, activate Dashboard via its hot-key†
 3. Drop the folder onto the appropriate area.
 
-†The Default hot-key for Dashboard is either the `F4` or `F12` button (depending on your model of Mac). Different hot-keys/hot-corners can be defined your System Preferences.
+![Demo of the Data Vu Widget in action](http://demoive.github.io/Data-Vu/data-vu-demo-full_small.gif)
 
-![The front of the Data Vu Widget](http://demoive.github.io/Data-Vu/data-vu-front.png)
+†The Default hot-key for Dashboard is either the `F4` or `F12` button (depending on your model of Mac). Different hot-keys/hot-corners can be defined your System Preferences.
 
 
 ## Features
@@ -42,7 +42,7 @@ Totally! The Data Vu widget uses the `rsync` command which as of v3.0 handles OS
 
 ### If I have Time Machine, Apple’s automatic back up utility, I have no use for this tool, right?
 
-Wrong! Although Time Machine allows you to exclude certain folders from the backup (so that you can control what is backed up), it keeps copies of things you’ve deleted (to enable restoration of different versions). Although this feature can be useful, your backup will also be loaded with data that you don’t need—or worse, that you don’t want anybody to ever see. The Data Vu widget creates an exact mirror of your source so that your target contains no less & more importantly, no more data than you expect.
+Not necessarily. Although Time Machine allows you to exclude certain folders from the backup (so that you can control what is backed up), it keeps copies of things you’ve deleted (to enable restoration of different versions). Although this feature can be useful, your backup will also be loaded with data that you don’t need—or worse, that you don’t want anybody to ever see. The Data Vu widget creates an exact mirror of your source so that your target contains no less & more importantly, no more data than you expect.
 
 ### What is the _Mirror_ operation?
 
